@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
-
+// HELP ME
 import { postMDBConfig } from '../../actions/PostMDBConfigAction';
 import postMovieGenres from '../../actions/movieActions/postMovieGenres';
 import postTVGenres from '../../actions/TVActions/postTVGenres';

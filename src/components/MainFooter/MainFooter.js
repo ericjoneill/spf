@@ -21,7 +21,7 @@ const MainFooter = () => {
 
         <div className="main-footer-top-item">
           <h3 className="main-footer-top-item__title">portfolio:</h3>
-          <p><a href="http://www.eric-oneill.com" target="_blank" rel="noopener noreferrer">www.eric-oneill.com</a></p>
+          <p><a href="www.eric-oneill.com" target="_blank" rel="noopener noreferrer">www.eric-oneill.com</a></p>
         </div>
 
         <div className="main-footer-top-item">
