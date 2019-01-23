@@ -2,7 +2,6 @@
   "name": "sf",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ericjoneill.github.io/sf",
   "dependencies": {
     "animate.css": "^3.7.0",
     "css-loader": "^1.0.1",
