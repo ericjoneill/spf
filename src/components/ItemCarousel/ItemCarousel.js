@@ -9,8 +9,10 @@ class ItemCarousel extends Component {
 
     // Cecks item's genre ids, compares them to genre list ids and returns genre names in a paragraph
     if (this.props.genres) {
-      let genresArr = this.props.genres.filter(genre => genre.id === genres[0] || genre.id === genres[1] ? genre.name : null);
-      return <p className="swiper-slide__genres">{genresArr[0] ? genresArr[0].name : ''}{genresArr[1] ? ` / ` + genresArr[1].name : ''}</p>
+      let genresArr = this.props.genres.filter(genre => genre.id === genres[0] || 
+        genre.id === genres[1] ? genre.name : null);
+      return <p className="swiper-slide__genres">{genresArr[0] ? genresArr[0].name : ''}
+      {genresArr[1] ? ` / ` + genresArr[1].name : ''}</p>
     }
   }
 
