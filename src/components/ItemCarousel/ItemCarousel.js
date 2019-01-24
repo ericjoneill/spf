@@ -6,8 +6,7 @@ import './ItemCarousel.scss';
 class ItemCarousel extends Component {
 
   handleGenres = genres => {
-
-    // Cecks item's genre ids, compares them to genre list ids and returns genre names in a paragraph
+    // Checks item's genre ids, compares them to genre list ids and returns genre names in a paragraph
     if (this.props.genres) {
       let genresArr = this.props.genres.filter(genre => genre.id === genres[0] || 
         genre.id === genres[1] ? genre.name : null);
@@ -28,7 +27,6 @@ class ItemCarousel extends Component {
           {/* Loops through item data and creates a carousel item */}
           <div className="swiper-wrapper">
             {this.props.items.map((movie, i) => (
-
               <div key={movie.id} className="swiper-slide">
                 <Link to={`/details/${this.props.type.toLowerCase()}/${movie.id}`} >
                   <img className="swiper-slide__image" src={`${config.images ? config.images.secure_base_url : ''}${config.images ? config.images.poster_sizes[1] : ''}${movie.poster_path}`} alt={movie.title} />

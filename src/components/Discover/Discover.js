@@ -37,7 +37,7 @@ class Discover extends Component {
       this.setState({ page: 1 });
     } else if (pageTransition === '+') {
       this.setState({ page: this.state.page + 1 })
-    } else if (pageTransition === '+') {
+    } else if (pageTransition === '-') {
       this.setState({ page: this.state.page - 1 })
     }
   }
