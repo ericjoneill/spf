@@ -29,7 +29,11 @@ class Discover extends Component {
 
   // handles discover data
   handleGetDiscover = (apiKey, page = 1) => {
-    this.props.getDiscover(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=${this.state.sortBy}&include_adult=false&include_video=false&page=${page}&${this.state.voteAverage ? `vote_average.gte=${this.state.voteAverage}&` : ''}${this.state.withGenres ? `with_genres=${this.state.withGenres}&` : ''}${this.state.withPeople ? `with_people=${this.state.withPeople}&` : ''}${this.state.year ? `year=${this.state.year}` : ''}`);
+    this.props.getDiscover(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}
+    &language=en-US&sort_by=${this.state.sortBy}&include_adult=false&include_video=false&page=${page}
+    &${this.state.voteAverage ? `vote_average.gte=${this.state.voteAverage}&` : ''}${this.state.withGenres ? 
+    `with_genres=${this.state.withGenres}&` : ''}${this.state.withPeople ? `with_people=${this.state.withPeople}
+    &` : ''}${this.state.year ? `year=${this.state.year}` : ''}`);
   }
 
   handlePagination = pageTransition => {

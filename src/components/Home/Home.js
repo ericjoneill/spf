@@ -110,7 +110,7 @@ class Home extends Component {
 
         <div className="item-controller">
           <button className="item-controller__switch wow fadeInDown" data-wow-delay=".5s" data-wow-duration="1s" onClick={() => { this.props.setItemType('MOVIES'); this.handleMovieFetch(); }}>Movies</button>
-          <button className="item-controller__switch wow fadeInDown" data-wow-delay=".5s" data-wow-duration="1s" onClick={() => { this.props.setItemType('TV'); this.handleTVFetch(); }}>TV Shows</button>
+          <button className="item-controller__switch wow fadeInDown" data-wow-delay=".5s" data-wow-duration="1s" onClick={() => { this.props.setItemType('TV'); this.handleTVFetch(); }}>Television</button>
         </div>
 
         <div className="home-container-main">
