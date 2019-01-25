@@ -20,9 +20,18 @@ import ItemCarousel from '../ItemCarousel/ItemCarousel';
 import MainFooter from '../MainFooter/MainFooter';
 import Loader from '../Loader/Loader';
 
+import { Link } from 'react-router-dom';
+
+import getDiscover from '../../actions/getDiscover';
+
+import '../Discover/Discover'
+
 import './Home.scss';
 
 class Home extends Component {
+
+  // https://api.themoviedb.org/3/movie/upcoming?api_key=${this.props.apiKey}&language=en-US&page=1
+  // https://api.themoviedb.org/3/discover/movie?
 
   // Checks which type of data to fetch
   componentDidMount() {
@@ -35,7 +44,7 @@ class Home extends Component {
 
   // fetches movie data
   handleMovieFetch = () => {
-    this.props.postMoviesUpcoming(`https://api.themoviedb.org/3/movie/upcoming?api_key=${this.props.apiKey}$genre=27&language=en-US&page=1`);
+    this.props.postMoviesUpcoming(`https://api.themoviedb.org/3/movie/upcoming?api_key=${this.props.apiKey}&language=en-US&page=1`);
     this.props.postMoviesPopular(`https://api.themoviedb.org/3/movie/popular?api_key=${this.props.apiKey}&language=en-US&page=1`);
     this.props.postMoviesNowPlaying(`https://api.themoviedb.org/3/movie/now_playing?api_key=${this.props.apiKey}&language=en-US&page=1`);
     this.props.postMoviesTopRated(`https://api.themoviedb.org/3/movie/top_rated?api_key=${this.props.apiKey}&language=en-US&page=1`);
