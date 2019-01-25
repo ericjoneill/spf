@@ -32,6 +32,13 @@ class Home extends Component {
 
   // https://api.themoviedb.org/3/movie/upcoming?api_key=${this.props.apiKey}&language=en-US&page=1
   // https://api.themoviedb.org/3/discover/movie?
+  /**
+   * `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}
+    &language=en-US&sort_by=${this.state.sortBy}&include_adult=false&include_video=false&page=${page}
+    &${this.state.voteAverage ? `vote_average.gte=${this.state.voteAverage}&` : ''}${this.state.withGenres ? 
+    `with_genres=${this.state.withGenres}&` : ''}${this.state.withPeople ? `with_people=${this.state.withPeople}
+    &` : ''}${this.state.year ? `year=${this.state.year}` : ''}`
+   */
 
   // Checks which type of data to fetch
   componentDidMount() {
@@ -46,6 +53,7 @@ class Home extends Component {
   handleMovieFetch = () => {
     this.props.postMoviesUpcoming(`https://api.themoviedb.org/3/movie/upcoming?api_key=${this.props.apiKey}&language=en-US&page=1`);
     this.props.postMoviesPopular(`https://api.themoviedb.org/3/movie/popular?api_key=${this.props.apiKey}&language=en-US&page=1`);
+    
     this.props.postMoviesNowPlaying(`https://api.themoviedb.org/3/movie/now_playing?api_key=${this.props.apiKey}&language=en-US&page=1`);
     this.props.postMoviesTopRated(`https://api.themoviedb.org/3/movie/top_rated?api_key=${this.props.apiKey}&language=en-US&page=1`);
   }
