@@ -31,7 +31,8 @@ import './Home.scss';
 class Home extends Component {
 
   // https://api.themoviedb.org/3/movie/upcoming?api_key=${this.props.apiKey}&language=en-US&page=1
-  // https://api.themoviedb.org/3/discover/movie?
+  // https://api.themoviedb.org/3/discover/movie?api_key=${this.props.apiKey}&with_genre=27&language=en-US&page=1
+  // https://api.themoviedb.org/3/movie/popular?api_key=${this.props.apiKey}&language=en-US&page=1
   /**
    * `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}
     &language=en-US&sort_by=${this.state.sortBy}&include_adult=false&include_video=false&page=${page}
@@ -51,11 +52,11 @@ class Home extends Component {
 
   // fetches movie data
   handleMovieFetch = () => {
-    this.props.postMoviesUpcoming(`https://api.themoviedb.org/3/movie/upcoming?api_key=${this.props.apiKey}&language=en-US&page=1`);
-    this.props.postMoviesPopular(`https://api.themoviedb.org/3/movie/popular?api_key=${this.props.apiKey}&language=en-US&page=1`);
-    
+    this.props.postMoviesUpcoming(`https://api.themoviedb.org/3/discover/movie?api_key=${this.props.apiKey}&with_genres=27&primary_release_date.gte=2019-02-01&primary_release_date.lte=2019-04-30&language=en-US&page=1`);
+    this.props.postMoviesPopular(`https://api.themoviedb.org/3/discover/movie?api_key=${this.props.apiKey}&with_genres=27&sort_by=popularity.desc&language=en-US&page=1`);
+
     this.props.postMoviesNowPlaying(`https://api.themoviedb.org/3/movie/now_playing?api_key=${this.props.apiKey}&language=en-US&page=1`);
-    this.props.postMoviesTopRated(`https://api.themoviedb.org/3/movie/top_rated?api_key=${this.props.apiKey}&language=en-US&page=1`);
+    this.props.postMoviesTopRated(`https://api.themoviedb.org/3/discover/movie?api_key=${this.props.apiKey}&with_genres=27&sort_by=vote_average.desc&vote_count.gte=10&sort_by=vote_average.desc&language=en-US&page=1`);
   }
 
   // fetches tv data
