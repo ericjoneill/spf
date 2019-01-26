@@ -54,7 +54,6 @@ class Home extends Component {
   handleMovieFetch = () => {
     this.props.postMoviesUpcoming(`https://api.themoviedb.org/3/discover/movie?api_key=${this.props.apiKey}&with_genres=27&primary_release_date.gte=2019-02-01&primary_release_date.lte=2019-08-30&sort_by=popularity.desc&language=en-US&page=1`);
     this.props.postMoviesPopular(`https://api.themoviedb.org/3/discover/movie?api_key=${this.props.apiKey}&with_genres=27&sort_by=popularity.desc&language=en-US&page=1`);
-
     this.props.postMoviesNowPlaying(`https://api.themoviedb.org/3/discover/movie?api_key=${this.props.apiKey}&with_genres=27&primary_release_date.gte=2018-12-20&sort_by=popularity.desc&page=1`);
     this.props.postMoviesTopRated(`https://api.themoviedb.org/3/discover/movie?api_key=${this.props.apiKey}&with_genres=27&sort_by=vote_average.desc&vote_count.gte=10&sort_by=vote_average.desc&language=en-US&page=1`);
   }
@@ -108,7 +107,7 @@ class Home extends Component {
         <ItemCarousel title="Upcoming" genres={this.props.movieGenres.genres} MDBConfig={this.props.MDBConfig} items={this.props.moviesUpcoming.results} type={this.props.itemType} />
         <ItemCarousel title="Popular" genres={this.props.movieGenres.genres} MDBConfig={this.props.MDBConfig} items={this.props.moviesPopular.results} type={this.props.itemType} />
         <ItemCarousel title="Now Playing" genres={this.props.movieGenres.genres} MDBConfig={this.props.MDBConfig} items={this.props.moviesNowPlaying.results} type={this.props.itemType} />
-        <ItemCarousel title="Top Rated" genres={this.props.movieGenres.genres} MDBConfig={this.props.MDBConfig} items={this.props.moviesTopRated.results} type={this.props.itemType} />
+        <ItemCarousel title="Our Picks" genres={this.props.movieGenres.genres} MDBConfig={this.props.MDBConfig} items={this.props.moviesTopRated.results} type={this.props.itemType} />
       </div>;
     } else if (this.props.itemType === 'TV') {
       movie =
@@ -124,7 +123,7 @@ class Home extends Component {
       <div className="home-container">
 
         <MainNav />
-        <HomeHeader itemType={this.props.itemType} MDBConfig={this.props.MDBConfig} movieGenres={this.props.itemType === 'TV' ? this.props.TVGenres : this.props.movieGenres} items={this.props.itemType === 'TV' ? this.props.TVAiringToday.results : this.props.moviesNowPlaying.results} />
+        <HomeHeader itemType={this.props.itemType} MDBConfig={this.props.MDBConfig} movieGenres={this.props.itemType === 'TV' ? this.props.TVGenres : this.props.movieGenres} items={this.props.itemType === 'TV' ? this.props.TVAiringToday.results : this.props.moviesPopular.results} />
 
         <div className="item-controller">
           <button className="item-controller__switch wow fadeInDown" data-wow-delay=".5s" data-wow-duration="1s" onClick={() => { this.props.setItemType('MOVIES'); this.handleMovieFetch(); }}>Movies</button>
