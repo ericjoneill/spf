@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 
 import './ItemCarousel.scss';
 
+import backup from './images/backup.jpg';
+
+
 class ItemCarousel extends Component {
 
   handleGenres = genres => {
@@ -29,7 +32,7 @@ class ItemCarousel extends Component {
             {this.props.items.map((movie, i) => (
               <div key={movie.id} className="swiper-slide">
                 <Link to={`/details/${this.props.type.toLowerCase()}/${movie.id}`} >
-                  <img className="swiper-slide__image" src={`${config.images ? config.images.secure_base_url : ''}${config.images ? config.images.poster_sizes[1] : ''}${movie.poster_path}`} alt={movie.title} />
+                  <img className="swiper-slide__image" src={`${config.images ? config.images.secure_base_url : backup}${config.images ? config.images.poster_sizes[1] : backup}${movie.poster_path ? movie.poster_path : backup}`} alt={movie.title} />
                   <h3 className="swiper-slide__title">{movie.title}</h3>
                   {this.handleGenres(movie.genre_ids)}
                   {/* <p className="swiper-slide-rating">
