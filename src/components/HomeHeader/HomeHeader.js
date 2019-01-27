@@ -65,7 +65,7 @@ class HomeHeader extends Component {
                   <div>
                     {/* <p className="swiper-slide__category">{'Latest'.toUpperCase()}</p> */}
                     <h2 className="swiper-slide__title">{this.props.itemType === 'MOVIE'? item.title : item.name}</h2>
-                    <p className="swiper-slide__item-duration">{this.handleGetGenre(item.genre_ids)} | {item.vote_average > 5 ? 'Hot' : 'Not'} Rating</p>
+                    <p className="swiper-slide__item-duration">{this.handleGetGenre(item.genre_ids)} | {item.vote_average >= 9 ? 'Fright Favorite': item.vote_average >= 5.4 ? `Watchable` : item.vote_average < 5.4 && item.vote_average > 1 ? 'Avoidable' : 'Unknown'} Rating</p>
                   </div>
                 </Link>
               );
