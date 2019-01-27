@@ -67,7 +67,7 @@
     .swiper-wrapper {
 
       .swiper-slide {
-        height: 500px;
+        height: 50vh
       }
     }
   }
@@ -75,8 +75,17 @@
 
 @media only screen and (min-width: 900px) {
   .home-swiper-container {
-    background-color: $primary-font-color;;
-    padding-top: 3rem;
+    background-color: $primary-font-color;
+    padding-top: 1rem;
+
+    .swiper-wrapper {
+
+      .swiper-slide {
+        height: 50vh;
+      }
+    }
+
+
 
     .swiper-pagination-progressbar-fill {
       background-color: $secondary-color;
@@ -94,7 +103,7 @@
       }
 
       .swiper-slide {
-        height: 70vh;
+        height: 60vh;
       }
     }
   }
