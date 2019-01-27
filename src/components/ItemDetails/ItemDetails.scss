@@ -351,7 +351,7 @@
   .item-details {
 
     &-header-info {
-      height: 94vh;
+      height: 58vh;
       padding: 3% 10%;
 
       &-nav {
@@ -362,7 +362,7 @@
       }
 
       &-container {
-        margin-top: 450px;
+        margin-top: 50px;
         grid-column-gap: 3rem;
 
         &-image {
@@ -381,7 +381,7 @@
 
     &-main {
       margin: 0 auto;
-      max-width: 70%;
+      max-width: 80%;
     }
   }
 }
@@ -390,11 +390,11 @@
   .item-details {
 
     &-header-info {
-      height: 92vh;
+      height: 62vh;
 
 
       &-container {
-        margin-top: 390px;
+        margin-top: 70px;
       }
     }
   }
