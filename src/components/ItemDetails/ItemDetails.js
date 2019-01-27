@@ -127,7 +127,7 @@ class ItemDetails extends Component {
               <h1 className="item-details-header-info-container-content__title">{this.props.movieDetails ? this.props.movieDetails.title : ''}</h1>
 
               <div className="item-details-header-info-container-content-rating">
-                <p className="item-details-header-info-container-content-rating__digit">{this.props.movieDetails ? this.props.movieDetails.vote_average : ''}</p>
+                <p className="item-details-header-info-container-content-rating__digit">{this.props.movieDetails ? Math.round(this.props.movieDetails.vote_average / 2) : ''}</p>
                 <StarRating className="item-details-header-info-container-content-rating__stars" rating={this.props.movieDetails ? this.props.movieDetails.vote_average : ''} itemType="movie" itemId={this.props.movieDetails.id}/>
               </div>
               {/* this.props.movieDetails.status */}
@@ -179,7 +179,7 @@ class ItemDetails extends Component {
               <h1 className="item-details-header-info-container-content__title">{this.props.peopleDetails ? this.props.peopleDetails.name : ''}</h1>
 
               <div className="item-details-header-info-container-content-rating">
-                <p className="item-details-header-info-container-content-rating__digit">{this.props.peopleDetails ? Math.round(this.props.peopleDetails.popularity) : ''}</p>
+                <p className="item-details-header-info-container-content-rating__digit">{this.props.peopleDetails ? (Math.round(this.props.peopleDetails.popularity)/2) : ''}</p>
                 <StarRating className="item-details-header-info-container-content-rating__stars" rating={this.props.peopleDetails ? this.props.peopleDetails.popularity : ''}  itemType="people" itemId={this.props.peopleDetails.id} />
               </div>
 

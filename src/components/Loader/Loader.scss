@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .loader-container {
-  background: linear-gradient(135deg, $secondary_color, $tertiary_color 71%);
+  background: linear-gradient(135deg, $secondary-color, $tertiary-color 71%);
   height: 100vh;
   opacity: 1;
   position: fixed;
