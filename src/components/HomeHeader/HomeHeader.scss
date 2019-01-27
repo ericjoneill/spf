@@ -76,11 +76,11 @@
 @media only screen and (min-width: 900px) {
   .home-swiper-container {
     background-color: $primary-font-color;;
-    padding-top: 4.9rem;
+    padding-top: 3rem;
 
     .swiper-pagination-progressbar-fill {
       background-color: $secondary-color;
-      padding-top: 4.7rem;
+      padding-top: 4.5rem;
     }
   }
 }
@@ -90,11 +90,11 @@
 
     .swiper-wrapper {
       div {
-        padding: 3rem;
+        padding: 1rem;
       }
 
       .swiper-slide {
-        height: 92vh;
+        height: 70vh;
       }
     }
   }
