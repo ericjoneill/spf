@@ -125,9 +125,9 @@ class ItemDetails extends Component {
 
             <div className="item-details-header-info-container-content">
               <h1 className="item-details-header-info-container-content__title">{this.props.movieDetails ? this.props.movieDetails.title : ''}</h1>
-
               <div className="item-details-header-info-container-content-rating">
-                <p className="item-details-header-info-container-content-rating__digit">{this.props.movieDetails ? Math.round(this.props.movieDetails.vote_average / 2) : ''}</p>
+                {/* <p className="item-details-header-info-container-content-rating__digit">{this.props.movieDetails.vote_average >= 9 ? 'Fright Favorite': this.props.movieDetails.vote_average >= 5.4 ? `Watchable` : this.props.movieDetails.vote_average < 5.4 && this.props.movieDetails.vote_average > 1 ? 'Avoidable' : 'Unknown'}</p> */}
+                {/* {this.props.movieDetails ? Math.round(this.props.movieDetails.vote_average / 2) : ''} */}
                 <StarRating className="item-details-header-info-container-content-rating__stars" rating={this.props.movieDetails ? this.props.movieDetails.vote_average : ''} itemType="movie" itemId={this.props.movieDetails.id}/>
               </div>
               {/* this.props.movieDetails.status */}
