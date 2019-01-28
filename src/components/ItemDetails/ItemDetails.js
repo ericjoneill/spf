@@ -391,7 +391,7 @@ class ItemDetails extends Component {
 
         <header className="item-details-header-info"
         style={{
-          background: `linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(0,0,0,0.45) 92%) center center no-repeat, #fff
+          background: `linear-gradient(0deg, rgba(41,6,6) 3%, rgba(10,10,0,.60) 92%) center center no-repeat, #1A0000
           url(${this.props.MDBConfig.images ? `${this.props.MDBConfig.images.secure_base_url}original${this.props.match.params.type === 'people' ? `${this.props.location.state ? this.props.location.state.backdropUrl : `${this.props.peopleCombinedCredits.cast.length > 0 ? this.props.peopleCombinedCredits.cast[0].backdrop_path : ''}`}` : `${this.props.match.params.type === 'movie' ? this.props.movieDetails.backdrop_path : this.props.TVDetails.backdrop_path}`}` : ''})
           center top no-repeat`}}>
 
