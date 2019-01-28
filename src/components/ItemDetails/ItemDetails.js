@@ -21,6 +21,7 @@ import TrailerCarousel from '../TrailerCarousel/TrailerCarousel';
 import Loader from '../Loader/Loader';
 
 import './ItemDetails.scss';
+import comingsoon from '../ItemCarousel/images/comingsoon.jpg'
 
 class ItemDetails extends Component {
 
@@ -121,7 +122,7 @@ class ItemDetails extends Component {
       case 'movie':
         return (
           <div className="item-details-header-info-container">
-            <img className="item-details-header-info-container-image" src={this.props.MDBConfig.images ? this.props.MDBConfig.images.secure_base_url +  this.props.MDBConfig.images.poster_sizes[0] + `${this.props.movieDetails ? this.props.movieDetails.poster_path : ''}` : ''} alt={this.props.movieDetails ? this.props.movieDetails.title : ''} />
+            <img className="item-details-header-info-container-image" src={this.props.movieDetails.poster_path ? this.props.MDBConfig.images.secure_base_url +  this.props.MDBConfig.images.poster_sizes[0] + `${this.props.movieDetails ? this.props.movieDetails.poster_path : ''}` : comingsoon} alt={this.props.movieDetails ? this.props.movieDetails.title : ''} />
 
             <div className="item-details-header-info-container-content">
               <h1 className="item-details-header-info-container-content__title">{this.props.movieDetails ? this.props.movieDetails.title : ''}</h1>
@@ -147,7 +148,7 @@ class ItemDetails extends Component {
       case 'tv':
         return (
           <div className="item-details-header-info-container">
-            <img className="item-details-header-info-container-image" src={this.props.MDBConfig.images ? this.props.MDBConfig.images.secure_base_url +  this.props.MDBConfig.images.poster_sizes[0] + `${this.props.TVDetails ? this.props.TVDetails.poster_path : ''}` : ''} alt={this.props.TVDetails ? this.props.TVDetails.title : ''} />
+            <img className="item-details-header-info-container-image" src={this.props.TVDetails.poster_path ? this.props.MDBConfig.images.secure_base_url +  this.props.MDBConfig.images.poster_sizes[0] + `${this.props.TVDetails ? this.props.TVDetails.poster_path : ''}` : comingsoon} alt={this.props.TVDetails ? this.props.TVDetails.title : ''} />
 
             <div className="item-details-header-info-container-content">
               <h1 className="item-details-header-info-container-content__title">{this.props.TVDetails ? this.props.TVDetails.name : ''}</h1>
