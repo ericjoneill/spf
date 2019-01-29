@@ -61,7 +61,7 @@ class HomeHeader extends Component {
                 <Link key={item.id} to={`/details/${this.props.itemType.toLowerCase()}/${item.id}`} className="swiper-slide" style={{background: `linear-gradient(
                 rgba(0, 0, 0, 0.6),
                 rgba(0, 0, 0, 0.6)
-              ) center center no-repeat, #fff url(${config.images ? config.images.secure_base_url : ''}${config.images ? config.images.backdrop_sizes[2] : ''}${item.backdrop_path}) center top no-repeat`, backgroundSize: 'cover, cover'}}>
+              ) center center no-repeat, #1A0000 url(${config.images ? config.images.secure_base_url : ''}${config.images ? config.images.backdrop_sizes[1] : ''}${item.backdrop_path}) center top no-repeat`, backgroundSize: 'cover, cover'}}>
                   <div>
                     {/* <p className="swiper-slide__category">{'Latest'.toUpperCase()}</p> */}
                     <h2 className="swiper-slide__title">{this.props.itemType === 'MOVIE'? item.title : item.name}</h2>

@@ -9,6 +9,8 @@ import Loader from '../Loader/Loader';
 
 import './Discover.scss';
 
+import comingsoon from '../ItemCarousel/images/comingsoon.jpg'
+
 class Discover extends Component {
 
   // Local state handles search form two way binding
@@ -86,7 +88,7 @@ class Discover extends Component {
           {this.props.discover.results.length > 0 ? this.props.discover.results.map(item => (
             <Link key={item.id} to={`/details/${item.name ? 'tv' : 'movie'}/${item.id}`}>
               <div className="discover-main-item">
-                <img className="discover-main-item__image" src={`${this.props.MDBConfig.images ? `${this.props.MDBConfig.images.secure_base_url}${this.props.MDBConfig.images.poster_sizes[0]}` : ''}${item.poster_path}`} alt={item.name ? item.name : item.title} />
+                <img className="discover-main-item__image" src={`${item.poster_path ? `${this.props.MDBConfig.images.secure_base_url + this.props.MDBConfig.images.poster_sizes[0]}` + item.poster_path : comingsoon}`} alt={item.name ? item.name : item.title} />
                 <h3 className="discover-main-item__title">{item.name ? item.name : item.title}</h3>
                 <p className="discover-main-item-rating">
                   <svg className="discover-main-item-rating__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z"/></svg>
