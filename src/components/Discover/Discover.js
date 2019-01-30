@@ -19,6 +19,7 @@ class Discover extends Component {
     voteAverage: null,
     withPeople: null,
     withGenres: 27,
+    withRating: null,
     withKeywords: null,
     year: null,
     page: 1
@@ -69,7 +70,7 @@ class Discover extends Component {
 
               <input className="discover-header-form-container-input wow fadeInUp" data-wow-delay=".8s" data-wow-duration="3s" onChange={(e)=> this.setState({ voteAverage: e.target.value })} type="number" name="vote_average" placeholder="Vote Average" />
               <input className="discover-header-form-container-input wow fadeInUp" data-wow-delay="1s" data-wow-duration="3s" onChange={(e)=> this.setState({ withPeople: e.target.value })} type="text" name="with_People" placeholder="People involved" />
-              {/* <input className="discover-header-form-container-input wow fadeInUp" data-wow-delay="1.2s" data-wow-duration="3s" onChange={(e)=> this.setState({ withGenres: e.target.value })} type="text" name="with_genres" placeholder="Genres" /> */}
+              <input className="discover-header-form-container-input wow fadeInUp" data-wow-delay="1.2s" data-wow-duration="3s" onChange={(e)=> this.setState({ withRating: e.target.value })} type="text" name="certification" placeholder="Rating" />
               <input className="discover-header-form-container-input wow fadeInUp" data-wow-delay="1.4s" data-wow-duration="3s" onChange={(e)=> this.setState({ withKeywords: e.target.value })} type="text" name="with_keywords" placeholder="Keywords" />
               <input className="discover-header-form-container-input wow fadeInUp" data-wow-delay="1.6s" data-wow-duration="3s" onChange={(e)=> this.setState({ year: e.target.value })} type="number" name="year" placeholder="Year" />
             </div>
