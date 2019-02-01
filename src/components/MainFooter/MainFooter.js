@@ -26,10 +26,10 @@ const MainFooter = () => {
 
         <div className="main-footer-top-item">
           <h3 className="main-footer-top-item__title">phone number:</h3>
-          <p>267 455-5383</p>
+          <p>215-625-3664</p>
         </div>
 
-        <p className="main-footer-top-copyright">Copyright &copy;2018<br /> Code and design by <a href="www.eric-oneill.com" target="_blank" rel="noopener noreferrer">Eric O'Neill</a></p>
+        <p className="main-footer-top-copyright">Copyright &copy;2018<br /> Code and design by <a href="#" target="_blank" rel="noopener noreferrer">Eric O'Neill</a></p>
 
       </section>
 
