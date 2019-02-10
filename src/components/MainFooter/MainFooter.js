@@ -21,15 +21,18 @@ const MainFooter = () => {
 
         <div className="main-footer-top-item">
           <h3 className="main-footer-top-item__title">portfolio:</h3>
-          <p><a href="#" target="_blank" rel="">non-disclosed</a></p>
+          <p><a href="https://www.eric-oneill.com" target="_blank" rel="">http://www.eric-oneill.com</a></p>
         </div>
 
         <div className="main-footer-top-item">
           <h3 className="main-footer-top-item__title">phone number:</h3>
-          <p>non-disclosed</p>
+          <p>[removed]</p>
         </div>
 
-        <p className="main-footer-top-copyright">Copyright &copy;2018<br /> Code and design by <a href="#" target="_blank" rel="noopener noreferrer">Eric O'Neill</a></p>
+
+        {/* <p>phone placeholder</p> */}
+
+        <p className="main-footer-top-copyright">Copyright &copy;2018<br /> Code and design by <a href="www.eric-oneill.com" target="_blank" rel="noopener noreferrer">Eric O'Neill</a></p>
 
       </section>
 
