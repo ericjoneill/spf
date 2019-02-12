@@ -32,7 +32,7 @@ const MainFooter = () => {
 
         {/* <p>phone placeholder</p> */}
 
-        <p className="main-footer-top-copyright">Copyright &copy;2018<br /> Code and design by <a href="www.eric-oneill.com" target="_blank" rel="noopener noreferrer">Eric O'Neill</a></p>
+        <p className="main-footer-top-copyright">Copyright &copy;2018 - 2019<br /> Code and design by <a href="www.eric-oneill.com" target="_blank" rel="noopener noreferrer">Eric O'Neill</a></p>
 
       </section>
 
