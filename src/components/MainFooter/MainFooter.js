@@ -26,7 +26,7 @@ const MainFooter = () => {
 
         <div className="main-footer-top-item">
           <h3 className="main-footer-top-item__title">phone number:</h3>
-          <p>[removed]</p>
+          <p>(267) 455 - 5383</p>
         </div>
 
 
